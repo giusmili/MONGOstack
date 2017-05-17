@@ -1,0 +1,26 @@
+<form action="" id="addRecepeForm">
+    <fieldset>
+        <legend>Décription de la recette</legend>
+    
+    <label for="recepTitle">Titre</label>
+    <input type="text" id="recepTitle">
+
+    <label for="recepDescription">Déscription</label>
+    <textarea id="recepDescription"></textarea>
+</fieldset>
+  <fieldset>
+        <legend>Ingrédient de la recette</legend>
+<ul>
+    <% for(ingredient of data){%>
+        <li>
+           <span class="checkbox"><input type="checkbox" class="checkBoxIngredients" value="<%=ingredient.title%>"><%=ingredient.title%></span>
+       
+           <input type="text" data-id="<%=ingredient._id%>" class="text-value">
+        </li>
+        <%}%>
+</ul>
+</fieldset>
+    <input type="submit" value="ajouter" class="btn-submit">
+
+</form>
+<script type="text/javascript" src="/js/add_recepe.js"></script>
